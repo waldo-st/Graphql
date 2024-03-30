@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: 0;
+    border: none;
+
+}
+
+:root {
+    --g:#316265;
+    --blueLight: #0ef;
+    --wites: #FFFFFF;
+    --orange: #ffa348;
+    --gree:#00ab81;
+    --blues: #F2F2F2;
+    --bodyColor: #1e1d2d;
+
+    --grey10: #E8E1F0;
+    --bluesTrans: rgba(0, 0, 0, 0.13);
+    --grie: #EAEAEA;
+    --gries: rgb(114, 107, 107);
+    
+    --orang:#c17f68;
+
+    --green: #3a8352;
+    --greenclair: #c0dbc9;
+    --color-1: #06747c;
+    --c1: #f15a24;
+    --c2: #7CFC00;
+    --c3: #9A7D0A ;
+    --c4: #7FFFD4;
+    --c5: #EDBB99;
+    --c6: #E0FFFF;
+    --c7: #cdc366;
+    --c8: #78b1b1;
+    --c9: #00FFFF;
+    --c10: #6C3483 ;
+    --c11: #228B22;
+    --c12: #d281f5 ;
+    --c13: #2980B9 ;
+    --c14: #ADFF2F;
+    --c15: #FF6347;
+}
+body{
+    background: #1e1d2d;
+    overflow: hidden;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.box::before{
+    content: '';
+    position: fixed;
+    inset: 0;
+}
+.error{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: #0000007e;
+}
+.print{
+    color: white;
+    font-size: 1.5em;
+}
+.button{
+    background-color: #cccccc;
+    color: black;
+    font-size: 1.2em;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+}
