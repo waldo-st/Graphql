@@ -36,6 +36,7 @@ template.innerHTML = /*html*/ `
     position: absolute;
     width: 10px;
     font-size:2px;
+    opacity:0;
     z-index:-1;
     transform: translateY(30px);
     transition: all 0.4s ease-in-out;
@@ -49,6 +50,7 @@ template.innerHTML = /*html*/ `
     width: 200px;
     color: var(--blues);
     background: #27283c;
+    opacity:1;
     box-shadow:0 5px 25px rgba(0,0,0,0.65);
     z-index: 1;
     font-size:0.9em;
