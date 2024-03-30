@@ -66,15 +66,15 @@ template.innerHTML = /*html*/ `
     font-weight: 300;
     color: var(--blues);
   }
-   .nb{
-      position: absolute;
-      bottom: 0;
-      left: 50;
-      padding: 10px;
-      font-size: 15px;
-      font-weight: 300;
-      color: var(--blues);
-    }
+  .nb{
+     position: absolute;
+     bottom: 0;
+     left: 50;
+     padding: 10px;
+     font-size: 15px;
+     font-weight: 300;
+     color: var(--blues);
+   }
 </style>
 <span class="nb">Survolez le graphique</span>
 <span class = "title">Distribution of projects by XP</span>
