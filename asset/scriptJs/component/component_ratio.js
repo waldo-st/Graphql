@@ -116,11 +116,8 @@ export default class composante_ratio extends HTMLElement {
     this.ratio = this.shadowRoot.querySelector(".ratio");
   }
   set insertInto(data) {
-    // const up = convertir(data.totalUp);
-    // const down = convertir(data.totalDown);
-
-    const down = 100;
-    const up = 108
+    const up = convertir(data.totalUp);
+    const down = convertir(data.totalDown);
     console.log(up, down)
     for (let i = 1; i <= 100; i++) {
       this.up.style.width = `${i}`;
