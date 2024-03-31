@@ -116,14 +116,18 @@ export default class composante_ratio extends HTMLElement {
     this.ratio = this.shadowRoot.querySelector(".ratio");
   }
   set insertInto(data) {
-    const up = convertir(data.totalUp);
-    const down = convertir(data.totalDown);
+    // const up = convertir(data.totalUp);
+    // const down = convertir(data.totalDown);
+
+    const down = 100;
+    const up = 108
+    console.log(up, down)
     for (let i = 1; i <= 100; i++) {
       this.up.style.width = `${i}`;
       this.up.style.animationDelay = `${i/1000}s` 
     }
     if (up > down) {
-      for (let i = 1; i <= 115; i++) {
+      for (let i = 1; i <= 85; i++) {
         this.down.style.width = `${i}`;
         this.down.style.animationDelay = `${i/1000}s` 
       }
@@ -133,7 +137,7 @@ export default class composante_ratio extends HTMLElement {
         this.down.style.animationDelay = `${i/1000}s` 
       }
     }else{
-      for (let i = 1; i <= 85; i++) {
+      for (let i = 1; i <= 115; i++) {
         this.down.style.width = `${i}`;
         this.down.style.animationDelay = `${i/1000}s` 
       }
