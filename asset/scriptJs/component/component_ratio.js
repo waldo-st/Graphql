@@ -141,7 +141,10 @@ export default class composante_ratio extends HTMLElement {
     this.Done.textContent = up;
     this.Received.textContent = down;
     this.ratio.textContent = data.auditRatio.toFixed(1);
-    if (data.auditRatio >= 1.2) {
+    if(data.auditRatio > 0.9 && data.auditRatio < 1.2){
+      this.down.style.fill = "#f0bb00";
+      this.ratio.style.color = "#f0bb00";
+    }else if (data.auditRatio >= 1.2) {
       this.down.style.fill = "#00ab81";
       this.ratio.style.color = "#00ab81";
     } else {
