@@ -152,7 +152,6 @@ export default class composante_project extends HTMLElement {
       }else{
         infoGraph.innerHTML = `<span>Project: ${data[i].object.name}</span><span>Xp: ${Math.round(nbrXP)} kB</span><span>Date: ${formatDate(data[i].createdAt)}</span>`
       }
-      console.log(data[i].object.name+" => "+nbrXP.toFixed(2))
       let rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
       rect.classList.add('rectGraph')
       rect.setAttribute("x", `${TabPoint[i].x}`);

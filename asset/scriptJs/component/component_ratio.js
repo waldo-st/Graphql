@@ -118,7 +118,6 @@ export default class composante_ratio extends HTMLElement {
   set insertInto(data) {
     const up = convertir(data.totalUp);
     const down = convertir(data.totalDown);
-    console.log(up, down)
     for (let i = 1; i <= 100; i++) {
       this.up.style.width = `${i}`;
       this.up.style.animationDelay = `${i/1000}s` 

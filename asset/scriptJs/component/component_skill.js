@@ -120,7 +120,6 @@ export default class composante_skill extends HTMLElement {
       const color = this.colors[k % (this.colors.length - 1)];
       const text = document.createElement('div');
       const legend = document.createElement('span');
-      console.log(v.type)
       legend.style.color = color
       text.classList.add('text')
       const namesTechno = v.type.split('_')
