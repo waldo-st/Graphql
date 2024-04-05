@@ -60,6 +60,7 @@ template.innerHTML = /*html*/ `
       animation: down 0.5s linear forwards;
       width:0;
       opacity:0;
+      fill: var(--blues);
     }
 
     @keyframes down {
@@ -118,6 +119,7 @@ export default class composante_ratio extends HTMLElement {
   set insertInto(data) {
     const up = convertir(data.totalUp);
     const down = convertir(data.totalDown);
+    console.log(up, down)
     for (let i = 1; i <= 100; i++) {
       this.up.style.width = `${i}`;
       this.up.style.animationDelay = `${i/1000}s` 
@@ -142,13 +144,13 @@ export default class composante_ratio extends HTMLElement {
     this.Received.textContent = down;
     this.ratio.textContent = data.auditRatio.toFixed(1);
     if(data.auditRatio > 0.9 && data.auditRatio < 1.2){
-      this.down.style.fill = "#f0bb00";
+      this.up.style.fill = "#f0bb00";
       this.ratio.style.color = "#f0bb00";
     }else if (data.auditRatio >= 1.2) {
-      this.down.style.fill = "#00ab81";
+      this.up.style.fill = "#00ab81";
       this.ratio.style.color = "#00ab81";
     } else {
-      this.down.style.fill = "#ffa482";
+      this.up.style.fill = "#ffa482";
       this.ratio.style.color = "#ffa482";
     }
   }

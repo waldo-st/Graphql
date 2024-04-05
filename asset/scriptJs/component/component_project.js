@@ -69,13 +69,13 @@ template.innerHTML = /*html*/ `
     color: var(--blues);
   }
   .nb{
-    position: absolute;
-    bottom: 0;
-    left: 50;
-    padding: 10px;
-    font-size: 15px;
-    font-weight: 300;
-    color: var(--blues);
+     position: absolute;
+     bottom: 0;
+     left: 50;
+     padding: 10px;
+     font-size: 15px;
+     font-weight: 300;
+     color: var(--blues);
    }
 </style>
 <span class="nb">Survolez le graphique</span>
@@ -144,14 +144,7 @@ export default class composante_project extends HTMLElement {
       infoGraph.classList.add('legend')
       infoGraph.style.setProperty('top', `${TabPoint[i].y}px`)
       infoGraph.style.setProperty('left', `${TabPoint[i].x + 9}px`)
-      const nbrXP = data[i].amount/1000;
-      if (nbrXP <= 10){
-        infoGraph.innerHTML = `<span>Project: ${data[i].object.name}</span><span>Xp: ${nbrXP.toFixed(2)} kB</span><span>Date: ${formatDate(data[i].createdAt)}</span>`
-      }else if (nbrXP > 10 && nbrXP <= 100){
-        infoGraph.innerHTML = `<span>Project: ${data[i].object.name}</span><span>Xp: ${nbrXP.toFixed(1)} kB</span><span>Date: ${formatDate(data[i].createdAt)}</span>`
-      }else{
-        infoGraph.innerHTML = `<span>Project: ${data[i].object.name}</span><span>Xp: ${Math.round(nbrXP)} kB</span><span>Date: ${formatDate(data[i].createdAt)}</span>`
-      }
+      infoGraph.innerHTML = `<span>Project: ${data[i].object.name}</span><span>Xp: ${Math.round(data[i].amount/1000)} kB</span><span>Date: ${formatDate(data[i].createdAt)}</span>`
       let rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
       rect.classList.add('rectGraph')
       rect.setAttribute("x", `${TabPoint[i].x}`);
